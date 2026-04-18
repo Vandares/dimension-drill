@@ -3,7 +3,7 @@ import './App.css'
 function App() {
   const sections = [
     {
-      title: 'CROSTINI STUZZICHINI',
+      title: 'LUNCH',
       items: [
         {
           name: 'OLIVES & TAPENADE',
@@ -21,6 +21,42 @@ function App() {
           icons: ['❀', '◌'],
           image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
         },
+        {
+          name: 'BRUSCHETTA',
+          description: 'Homemade thinly sliced pizza bread with fresh cherry tomato and Italian basil.',
+          calories: '186.04 cal',
+          price: '﷼ 55',
+          icons: ['❀'],
+          image: 'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'BRUSCHETTA',
+          description: 'Homemade thinly sliced pizza bread with fresh cherry tomato and Italian basil.',
+          calories: '186.04 cal',
+          price: '﷼ 55',
+          icons: ['❀'],
+          image: 'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'BRUSCHETTA',
+          description: 'Homemade thinly sliced pizza bread with fresh cherry tomato and Italian basil.',
+          calories: '186.04 cal',
+          price: '﷼ 55',
+          icons: ['❀'],
+          image: 'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'BRUSCHETTA',
+          description: 'Homemade thinly sliced pizza bread with fresh cherry tomato and Italian basil.',
+          calories: '186.04 cal',
+          price: '﷼ 55',
+          icons: ['❀'],
+          image: 'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80',
+        },
+
         {
           name: 'BRUSCHETTA',
           description: 'Homemade thinly sliced pizza bread with fresh cherry tomato and Italian basil.',
