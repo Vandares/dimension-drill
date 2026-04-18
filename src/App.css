@@ -253,11 +253,11 @@ body {
   }
 
   .menu-content h3 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .description {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .meta {
@@ -269,10 +269,10 @@ body {
   }
 
   .search-placeholder {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .hero .subtitle {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
