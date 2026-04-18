@@ -68,11 +68,14 @@ body {
   grid-template-columns: 1fr 120px;
   background: var(--card);
   border: 1px solid var(--border);
-  min-height: 120px;
+  height: 160px; /* 🔥 fixed height */
 }
 
 .menu-content {
   padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 🔥 keeps bottom aligned */
 }
 
 .menu-content h3 {
@@ -94,9 +97,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #8b8b8b;
-  font-size: 13px;
+  margin-top: auto;
 }
+
+.description {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  font-style: italic;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 🔥 max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
 
 .price {
   color: #4a4a4a;
@@ -140,4 +157,32 @@ body {
     border-top: 1px solid var(--border);
     min-height: 180px;
   }
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: 200;
+}
+
+.footer span {
+  display: block;
+  margin-top: 6px;
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 350px; /* 👈 max size */
+  margin: 20px auto;
+  display: block;
 }

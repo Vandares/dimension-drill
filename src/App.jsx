@@ -1,9 +1,10 @@
 import './App.css'
+import logo from './assets/logo.png'
 
 function App() {
   const sections = [
     {
-      title: 'CROSTINI STUZZICHINI',
+      title: 'Lunch',
       items: [
         {
           name: 'OLIVES & TAPENADE',
@@ -21,42 +22,29 @@ function App() {
           image:
             'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
         },
+
         {
-          name: 'BRUSCHETTA',
-          description: 'Homemade thinly sliced pizza bread with fresh cherry tomato and Italian basil.',
-          calories: '186.04 cal',
-          price: '$55',
+          name: 'GARLIC BREAD & TOMATO',
+          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
+          calories: '440.02 cal',
+          price: '$45',
           image:
-            'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
         },
+
         {
-          name: 'BRUSCHETTA FUNGHI',
-          description: 'Homemade thinly sliced pizza bread with sauté button mushrooms, garlic and ricotta cheese.',
-          calories: '281.75 cal',
-          price: '$59',
+          name: 'GARLIC BREAD & TOMATO',
+          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
+          calories: '440.02 cal',
+          price: '$45',
           image:
-            'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
         },
-        {
-          name: 'BURRATA',
-          description: 'Creamy burrata cheese from Puglia with Coccoletti cherry tomato sauce.',
-          calories: '439.09 cal',
-          price: '$119',
-          image:
-            'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80',
-        },
-        {
-          name: 'BASKET OF BREAD',
-          description: 'Homemade pizza bread with mixed spices and olive oil dip.',
-          calories: '303.25 cal',
-          price: '$38',
-          image:
-            'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
-        },
+
       ],
     },
     {
-      title: 'CARPACCIO & INSALATA (SALAD)',
+      title: 'Salads',
       items: [
         {
           name: 'BRESAOLA',
@@ -66,29 +54,32 @@ function App() {
           image:
             'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
         },
+
         {
-          name: 'CARPACCIO DI ANGUS BEEF',
-          description: 'Thinly sliced Angus beef fillet marinated in roasted black pepper with rocket, parmesan, lemon, and mustard dressing.',
-          calories: '369.02 cal',
-          price: '$89',
-          image:
-            'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
-        },
-        {
-          name: 'SMOKED CHICKEN BREAST SALAD',
-          description: 'Lettuce with Coccoletti caesar dressing and chicken breast slices.',
-          calories: '626.12 cal',
-          price: '$74',
+          name: 'BRESAOLA',
+          description: 'Homemade dry-cured Spanish high grade beef with rocket and parmesan.',
+          calories: '149.13 cal',
+          price: '$84',
           image:
             'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
         },
+
         {
-          name: 'VITELLO TONNATO',
-          description: 'Thin slices of veal fillet with tuna sauce, potatoes, green beans and capers.',
-          calories: '294.14 cal',
-          price: '$88',
+          name: 'BRESAOLA',
+          description: 'Homemade dry-cured Spanish high grade beef with rocket and parmesan.',
+          calories: '149.13 cal',
+          price: '$84',
           image:
-            'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'BRESAOLA',
+          description: 'Homemade dry-cured Spanish high grade beef with rocket and parmesan.',
+          calories: '149.13 cal',
+          price: '$84',
+          image:
+            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
         },
       ],
     },
@@ -96,9 +87,11 @@ function App() {
 
   return (
     <div className="page">
+
       <header className="hero">
-        <h1>RISTORANTE BELLA CASA</h1>
-        <p className="subtitle">Italian Dining Experience</p>
+        <h1>MAIN MENU</h1>
+        <img src={logo} alt="Sol Beach Resort" className="hero-image" />
+        <p className="subtitle">Sol Beach Kitchen</p>
       </header>
 
       {sections.map((section) => (
@@ -126,6 +119,12 @@ function App() {
           </div>
         </section>
       ))}
+
+      <footer className="footer">
+        <p>© 2026 Sol Beach Resort. All rights reserved.</p>
+        <span>Made by Sol Beach Resort</span>
+      </footer>
+
     </div>
   )
 }
