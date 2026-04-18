@@ -227,15 +227,15 @@ body {
   }
 
   .menu-content h3 {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .description {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .icons-row {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .meta {
@@ -243,6 +243,6 @@ body {
   }
 
   .price {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
