@@ -1,5 +1,4 @@
 import './App.css'
-import logo from './assets/logo.png'
 
 function App() {
   const sections = [
@@ -90,7 +89,7 @@ function App() {
 
       <header className="hero">
         <h1>MAIN MENU</h1>
-        <img src={logo} alt="Sol Beach Resort" className="hero-image" />
+        <img src="/logo.png" alt="Sol Beach Resort" className="hero-image" />
         <p className="subtitle">Sol Beach Kitchen</p>
       </header>
 
