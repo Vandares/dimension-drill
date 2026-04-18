@@ -3,82 +3,31 @@ import './App.css'
 function App() {
   const sections = [
     {
-      title: 'Lunch',
+      title: 'CROSTINI STUZZICHINI',
       items: [
         {
           name: 'OLIVES & TAPENADE',
           description: 'With a selection of bread and breadsticks.',
           calories: '480.13 cal',
-          price: '$48',
-          image:
-            'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+          price: '﷼ 48',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
         },
         {
           name: 'GARLIC BREAD & TOMATO',
           description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
           calories: '440.02 cal',
-          price: '$45',
-          image:
-            'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
+          price: '﷼ 45',
+          icons: ['❀', '◌'],
+          image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
         },
-
         {
-          name: 'GARLIC BREAD & TOMATO',
-          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
-          calories: '440.02 cal',
-          price: '$45',
-          image:
-            'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'GARLIC BREAD & TOMATO',
-          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
-          calories: '440.02 cal',
-          price: '$45',
-          image:
-            'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
-        },
-
-      ],
-    },
-    {
-      title: 'Salads',
-      items: [
-        {
-          name: 'BRESAOLA',
-          description: 'Homemade dry-cured Spanish high grade beef with rocket and parmesan.',
-          calories: '149.13 cal',
-          price: '$84',
-          image:
-            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'BRESAOLA',
-          description: 'Homemade dry-cured Spanish high grade beef with rocket and parmesan.',
-          calories: '149.13 cal',
-          price: '$84',
-          image:
-            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'BRESAOLA',
-          description: 'Homemade dry-cured Spanish high grade beef with rocket and parmesan.',
-          calories: '149.13 cal',
-          price: '$84',
-          image:
-            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'BRESAOLA',
-          description: 'Homemade dry-cured Spanish high grade beef with rocket and parmesan.',
-          calories: '149.13 cal',
-          price: '$84',
-          image:
-            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
+          name: 'BRUSCHETTA',
+          description: 'Homemade thinly sliced pizza bread with fresh cherry tomato and Italian basil.',
+          calories: '186.04 cal',
+          price: '﷼ 55',
+          icons: ['❀'],
+          image: 'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80',
         },
       ],
     },
@@ -86,9 +35,17 @@ function App() {
 
   return (
     <div className="page">
+      <div className="topbar">
+        <div className="search-placeholder">Search</div>
+
+        <button className="menu-icon" type="button" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
       <header className="hero">
-        <h1>MAIN MENU</h1>
         <img src="/logo.png" alt="Sol Beach Resort" className="hero-image" />
         <p className="subtitle">Sol Beach Kitchen</p>
       </header>
@@ -103,6 +60,12 @@ function App() {
                 <div className="menu-content">
                   <h3>{item.name}</h3>
                   <p className="description">{item.description}</p>
+
+                  <div className="icons-row">
+                    {item.icons?.map((icon, index) => (
+                      <span key={index}>{icon}</span>
+                    ))}
+                  </div>
 
                   <div className="meta">
                     <span>{item.calories}</span>
@@ -123,7 +86,6 @@ function App() {
         <p>© 2026 Sol Beach Resort. All rights reserved.</p>
         <span>Made by Sol Beach Resort</span>
       </footer>
-
     </div>
   )
 }
