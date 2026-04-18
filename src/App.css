@@ -246,3 +246,33 @@ body {
     font-size: 12px;
   }
 }
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 26px;
+  }
+
+  .menu-content h3 {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .meta {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+  .search-placeholder {
+    font-size: 13px;
+  }
+
+  .hero .subtitle {
+    font-size: 13px;
+  }
+}
