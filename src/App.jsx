@@ -1,7 +1,14 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+
+
+const [showPopup, setShowPopup] = useState(true)
+
+
   const sections = [
+    
     {
       title: 'BREAKFAST',
       items: [
@@ -148,6 +155,28 @@ function App() {
 
   return (
     <div className="page">
+
+
+
+
+{showPopup && (
+  <div className="popup-overlay">
+    <div className="popup-box">
+      
+      <button className="popup-close" onClick={() => setShowPopup(false)}>
+        ✕
+      </button>
+
+      <h2>Welcome 👋</h2>
+      <p>Hi, welcome to Sol Beach Kitchen</p>
+
+    </div>
+  </div>
+)}
+
+
+
+      
       <div className="topbar">
         <div className="search-placeholder">Search</div>
 

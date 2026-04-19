@@ -277,3 +277,45 @@ body {
     font-size: 12px;
   }
 }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background: rgb(255, 123, 0);
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.popup-box h2 {
+  margin: 10px 0;
+}
+
+.popup-box p {
+  color: #666;
+}
