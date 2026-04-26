@@ -131,12 +131,7 @@ function App() {
 
           <div className="menu-grid">
             {section.items.map((item, index) => (
-              <article
-                className={`menu-card ${
-                  section.title === 'BEST SELLERS' && index === 0 ? 'featured' : ''
-                }`}
-                key={item.name}
-              >
+              <article className="menu-card" key={item.name}>
                 <div className="menu-content">
                   <h3>
                     {item.name}
