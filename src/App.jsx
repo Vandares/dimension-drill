@@ -2,25 +2,50 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-
   const [showPopup, setShowPopup] = useState(true)
 
-  // 🔥 LOGO ROTATION ON SCROLL
   useEffect(() => {
     const handleScroll = () => {
       const logo = document.querySelector('.hero-image')
       if (logo) {
-        const scrollY = window.scrollY
-        logo.style.transform = `rotate(${scrollY * 0.2}deg)`
+        logo.style.transform = `rotate(${window.scrollY * 0.2}deg)`
       }
     }
 
     window.addEventListener('scroll', handleScroll)
-
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const sections = [
+    {
+      title: 'BEST SELLERS',
+      items: [
+        {
+          name: 'SOL Club Sandwich',
+          description: 'Our most popular sandwich with fresh ingredients.',
+          calories: '520 cal',
+          price: '﷼ 55',
+          icons: ['★'],
+          image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=600&q=80',
+        },
+        {
+          name: 'American Breakfast',
+          description: 'Classic breakfast with eggs, toast, and sides.',
+          calories: '650 cal',
+          price: '﷼ 60',
+          icons: ['★'],
+          image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80',
+        },
+        {
+          name: 'Haloumi Sandwich',
+          description: 'Grilled haloumi with fresh bread and sauce.',
+          calories: '480 cal',
+          price: '﷼ 48',
+          icons: ['★'],
+          image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80',
+        },
+      ],
+    },
     {
       title: 'BREAKFAST',
       items: [
@@ -32,8 +57,6 @@ function App() {
           icons: ['◔'],
           image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
         },
-
-
         {
           name: 'American Breakfast',
           description: 'With a selection of bread and breadsticks.',
@@ -42,8 +65,6 @@ function App() {
           icons: ['◔'],
           image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
         },
-
-
         {
           name: 'Omelette',
           description: 'With a selection of bread and breadsticks.',
@@ -52,8 +73,6 @@ function App() {
           icons: ['◔'],
           image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
         },
-
-
         {
           name: 'Fried Eggs',
           description: 'With a selection of bread and breadsticks.',
@@ -62,8 +81,6 @@ function App() {
           icons: ['◔'],
           image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
         },
-
-
         {
           name: 'Haloumi Sandwich',
           description: 'With a selection of bread and breadsticks.',
@@ -72,123 +89,26 @@ function App() {
           icons: ['◔'],
           image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
         },
-
-        {
-          name: 'SOL Club Sandwich',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'Tuna Sandwich',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'Smoked Salmon Sandwich',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'Smoked Salmon Sandwich (egg) ',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'SOL Club Sandwich',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
-
-        {
-          name: 'SOL Club Sandwich',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
       ],
     },
-
     {
       title: 'LUNCH',
       items: [
         {
-          name: 'GARLIC BREAD & TOMATO',
+          name: 'Garlic Bread & Tomato',
           description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
           calories: '440.02 cal',
           price: '﷼ 45',
           icons: ['❀', '◌'],
           image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
         },
-
-
         {
-          name: 'GARLIC BREAD & TOMATO',
-          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
-          calories: '440.02 cal',
-          price: '﷼ 45',
-          icons: ['❀', '◌'],
-          image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
-        },
-
-
-        {
-          name: 'GARLIC BREAD & TOMATO',
-          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
-          calories: '440.02 cal',
-          price: '﷼ 45',
-          icons: ['❀', '◌'],
-          image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
-        },
-
-
-        {
-          name: 'GARLIC BREAD & TOMATO',
-          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
-          calories: '440.02 cal',
-          price: '﷼ 45',
-          icons: ['❀', '◌'],
-          image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
-        },
-
-
-        {
-          name: 'GARLIC BREAD & TOMATO',
-          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
-          calories: '440.02 cal',
-          price: '﷼ 45',
-          icons: ['❀', '◌'],
-          image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
-        },
-
-        
-        {
-          name: 'GARLIC BREAD & TOMATO',
-          description: 'Pizza dough with tomato sauce and fresh tomato with garlic.',
-          calories: '440.02 cal',
-          price: '﷼ 45',
-          icons: ['❀', '◌'],
-          image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
+          name: 'SOL Burger',
+          description: 'Juicy burger served with crispy fries.',
+          calories: '710 cal',
+          price: '﷼ 65',
+          icons: ['★'],
+          image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80',
         },
       ],
     },
@@ -196,22 +116,18 @@ function App() {
 
   return (
     <div className="page">
-
-      {/* POPUP */}
       {showPopup && (
         <div className="popup-overlay">
           <div className="popup-box">
             <button className="popup-close" onClick={() => setShowPopup(false)}>
               ✕
             </button>
-
             <h2>Welcome 👋</h2>
             <p>Hi, welcome to Sol Beach Kitchen</p>
           </div>
         </div>
       )}
 
-      {/* TOP BAR */}
       <div className="topbar">
         <div className="search-placeholder">Search</div>
 
@@ -222,13 +138,11 @@ function App() {
         </button>
       </div>
 
-      {/* HERO */}
       <header className="hero">
         <img src="/logo.png" alt="Sol Beach Resort" className="hero-image" />
         <p className="subtitle">Sol Beach Kitchen</p>
       </header>
 
-      {/* SECTIONS */}
       {sections.map((section) => (
         <section className="menu-section" key={section.title}>
           <h2 className="section-title">{section.title}</h2>
@@ -261,12 +175,10 @@ function App() {
         </section>
       ))}
 
-      {/* FOOTER */}
       <footer className="footer">
         <p>© 2026 Sol Beach Resort. All rights reserved.</p>
         <span>Made by Sol Beach Resort</span>
       </footer>
-
     </div>
   )
 }
