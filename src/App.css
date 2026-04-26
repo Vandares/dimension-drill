@@ -342,3 +342,28 @@ body {
     transform: scale(1) translateY(0);
   }
 }
+
+
+
+.best-sellers .section-title {
+  color: #c97a2c;
+}
+
+.best-sellers .menu-card {
+  background: #fff6e8;
+  border: 1px solid #c97a2c;
+}
+
+.badge {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: #c97a2c;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.featured {
+  grid-column: 1 / -1;
+  border: 2px solid #d4a017;
+}

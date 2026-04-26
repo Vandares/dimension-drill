@@ -65,30 +65,6 @@ function App() {
           icons: ['◔'],
           image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
         },
-        {
-          name: 'Omelette',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
-        {
-          name: 'Fried Eggs',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
-        {
-          name: 'Haloumi Sandwich',
-          description: 'With a selection of bread and breadsticks.',
-          calories: '480.13 cal',
-          price: '﷼ 48',
-          icons: ['◔'],
-          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
-        },
       ],
     },
     {
@@ -101,14 +77,6 @@ function App() {
           price: '﷼ 45',
           icons: ['❀', '◌'],
           image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
-        },
-        {
-          name: 'SOL Burger',
-          description: 'Juicy burger served with crispy fries.',
-          calories: '710 cal',
-          price: '﷼ 65',
-          icons: ['★'],
-          image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80',
         },
       ],
     },
@@ -144,19 +112,33 @@ function App() {
       </header>
 
       {sections.map((section) => (
-        <section className="menu-section" key={section.title}>
+        <section
+          className={`menu-section ${section.title === 'BEST SELLERS' ? 'best-sellers' : ''}`}
+          key={section.title}
+        >
           <h2 className="section-title">{section.title}</h2>
 
           <div className="menu-grid">
-            {section.items.map((item) => (
-              <article className="menu-card" key={item.name}>
+            {section.items.map((item, index) => (
+              <article
+                className={`menu-card ${
+                  section.title === 'BEST SELLERS' && index === 0 ? 'featured' : ''
+                }`}
+                key={item.name}
+              >
                 <div className="menu-content">
-                  <h3>{item.name}</h3>
+                  <h3>
+                    {item.name}
+                    {section.title === 'BEST SELLERS' && (
+                      <span className="badge">★ Best Seller</span>
+                    )}
+                  </h3>
+
                   <p className="description">{item.description}</p>
 
                   <div className="icons-row">
-                    {item.icons?.map((icon, index) => (
-                      <span key={index}>{icon}</span>
+                    {item.icons?.map((icon, iconIndex) => (
+                      <span key={iconIndex}>{icon}</span>
                     ))}
                   </div>
 
