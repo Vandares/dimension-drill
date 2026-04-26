@@ -44,6 +44,17 @@ function App() {
           icons: ['★'],
           image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80',
         },
+
+        {
+          name: 'Haloumi Sandwich',
+          description: 'Grilled haloumi with fresh bread and sauce.',
+          calories: '480 cal',
+          price: '﷼ 48',
+          icons: ['★'],
+          image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80',
+        },
+
+        
       ],
     },
     {
