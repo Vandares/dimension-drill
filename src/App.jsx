@@ -64,12 +64,94 @@ function App() {
           name: 'Oriental Breakfast',
           description: 'With a selection of bread and breadsticks.',
           calories: '480.13 cal',
+          price: '﷼ 75',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'American Breakfast',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
+          price: '﷼ 75',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'Omelette',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
+          price: '﷼ 32',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'Fried Eggs',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
           price: '﷼ 48',
           icons: ['◔'],
           image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
         },
+
         {
-          name: 'American Breakfast',
+          name: 'Haloumi Sandwich',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
+          price: '﷼ 48',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'SOL Club Sandwich',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
+          price: '﷼ 48',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'Tuna Sandwich',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
+          price: '﷼ 48',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'Smoked Salmon Sandwich',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
+          price: '﷼ 48',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'Smoked Salmon Sandwich with Egg',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
+          price: '﷼ 48',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'Hash Browns',
+          description: 'With a selection of bread and breadsticks.',
+          calories: '480.13 cal',
+          price: '﷼ 48',
+          icons: ['◔'],
+          image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80',
+        },
+
+        {
+          name: 'Bread Basket',
           description: 'With a selection of bread and breadsticks.',
           calories: '480.13 cal',
           price: '﷼ 48',
