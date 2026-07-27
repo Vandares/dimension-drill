@@ -1,8 +1,29 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+const slugify = (title) =>
+  title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+
+const toLabel = (title) =>
+  title
+    .toLowerCase()
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+
 function App() {
   const [showPopup, setShowPopup] = useState(true)
+
+  const scrollToSection = (id) => {
+    const target = document.getElementById(id)
+    if (!target) return
+
+    const top = target.getBoundingClientRect().top + window.scrollY - 70
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -204,10 +225,34 @@ function App() {
         <p className="subtitle">Sol Beach Kitchen</p>
       </header>
 
+      <nav className="category-nav" aria-label="Menu sections">
+        <div className="category-scroll">
+          {sections.map((section) => (
+            <button
+              className="category-chip"
+              type="button"
+              key={section.title}
+              onClick={() => scrollToSection(slugify(section.title))}
+            >
+              <span className="category-thumb">
+                <img
+                  src={section.items[0]?.image || '/logo.png'}
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
+
+              <span className="category-label">{toLabel(section.title)}</span>
+            </button>
+          ))}
+        </div>
+      </nav>
+
       {sections.map((section) => (
         <section
           className={`menu-section ${section.title === 'BEST SELLERS' ? 'best-sellers' : ''}`}
           key={section.title}
+          id={slugify(section.title)}
         >
           <h2 className="section-title">{section.title}</h2>
 
